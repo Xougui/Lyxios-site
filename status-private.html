@@ -1,0 +1,89 @@
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statut Privé (Owner) - Lyxios Bot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#355E3B', // Couleur principale du site
+                        'dark-bg': '#2c2f33', // Couleur de fond sombre
+                        'light-bg': '#ffffff', // Couleur de fond claire
+                        'dark-card': '#36393f', // Couleur de carte sombre
+                        'light-card': '#f2f2f2', // Couleur de carte claire
+                        'dark-text': '#dcddde', // Couleur de texte sombre
+                        'light-text': '#36393f', // Couleur de texte claire
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text transition-colors duration-300">
+    <header class="bg-primary text-white p-4 shadow-md">
+        <nav class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Lyxios Bot</h1>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:underline">Accueil</a></li>
+                <li><a href="status-public.html" class="hover:underline">Statut Public</a></li>
+                <li><a href="status-private.html" class="hover:underline">Statut Privé (Owner)</a></li>
+                <li><button id="discord-login-btn" class="bg-white text-primary px-4 py-2 rounded-full hover:bg-gray-100 transition-colors duration-300">Connexion Discord</button></li>
+                <li>
+                    <button id="theme-toggle" class="bg-white text-primary px-4 py-2 rounded-full hover:bg-gray-100 transition-colors duration-300">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-8">
+        <section id="private-status" class="mb-12">
+            <h2 class="text-4xl font-extrabold text-center mb-8 bg-gradient-to-r from-primary to-green-600 text-transparent bg-clip-text">Statut Privé des Bots (Owner)</h2>
+            <div id="status-container-private" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Les statuts des bots seront injectés ici par JavaScript -->
+                <div class="bg-light-card dark:bg-dark-card p-6 rounded-xl shadow-lg flex items-center justify-between border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-xl font-bold">Lyxios</h3>
+                    <div class="flex items-center">
+                        <span class="status-indicator w-4 h-4 rounded-full mr-2 bg-gray-400 animate-pulse"></span>
+                        <span class="status-text text-lg">Chargement...</span>
+                    </div>
+                </div>
+                <div class="bg-light-card dark:bg-dark-card p-6 rounded-xl shadow-lg flex items-center justify-between border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-xl font-bold">Manage Bot</h3>
+                    <div class="flex items-center">
+                        <span class="status-indicator w-4 h-4 rounded-full mr-2 bg-gray-400 animate-pulse"></span>
+                        <span class="status-text text-lg">Chargement...</span>
+                    </div>
+                </div>
+                <div class="bg-light-card dark:bg-dark-card p-6 rounded-xl shadow-lg flex items-center justify-between border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-xl font-bold">Panel Lyxios</h3>
+                    <div class="flex items-center">
+                        <span class="status-indicator w-4 h-4 rounded-full mr-2 bg-gray-400 animate-pulse"></span>
+                        <span class="status-text text-lg">Chargement...</span>
+                    </div>
+                </div>
+                <div class="bg-light-card dark:bg-dark-card p-6 rounded-xl shadow-lg flex items-center justify-between border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-xl font-bold">Panel Manage Bot</h3>
+                    <div class="flex items-center">
+                        <span class="status-indicator w-4 h-4 rounded-full mr-2 bg-gray-400 animate-pulse"></span>
+                        <span class="status-text text-lg">Chargement...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary text-white p-4 text-center shadow-inner mt-12">
+        <p>&copy; 2025 Lyxios Bot. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

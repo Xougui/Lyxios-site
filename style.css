@@ -1,0 +1,101 @@
+/* Importation de la police Inter depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
+
+/* Styles de base pour le corps du document */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    /* Transition pour le mode clair/sombre */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Conteneur principal pour centrer le contenu */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Styles pour les indicateurs de statut */
+.status-indicator {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.status-indicator.online {
+    background-color: #28a745; /* Vert pour en ligne */
+}
+
+.status-indicator.offline {
+    background-color: #dc3545; /* Rouge pour hors ligne */
+}
+
+.status-indicator.unknown {
+    background-color: #ffc107; /* Jaune pour inconnu */
+}
+
+/* Styles pour les barres du graphique de l'historique */
+.status-bar {
+    width: 2%; /* Ajustez la largeur pour le nombre de points de données */
+    height: 100%;
+    margin-right: 2px; /* Espacement entre les barres */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.status-bar.online {
+    background-color: #28a745;
+}
+
+.status-bar.offline {
+    background-color: #dc3545;
+}
+
+.status-bar.unknown {
+    background-color: #ffc107;
+}
+
+/* Animation pour les indicateurs de chargement */
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Styles spécifiques pour le mode sombre (appliqués via JavaScript) */
+body.dark {
+    background-color: #2c2f33;
+    color: #dcddde;
+}
+
+body.dark .bg-light-card {
+    background-color: #36393f;
+}
+
+body.dark .text-light-text {
+    color: #dcddde;
+}
+
+body.dark .border-gray-200 {
+    border-color: #4f545c;
+}
+
+body.dark .bg-gray-100 {
+    background-color: #36393f;
+}
